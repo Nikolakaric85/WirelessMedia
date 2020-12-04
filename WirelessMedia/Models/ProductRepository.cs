@@ -14,7 +14,7 @@ namespace WirelessMedia.Models
             this.context = context;
         }
 
-        IEnumerable<Products> IProductRepository.allProducts => context.Products;
+       IEnumerable<Products> IProductRepository.allProducts => context.Products;
 
         public Products Add(Products products)
         {

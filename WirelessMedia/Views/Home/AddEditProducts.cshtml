@@ -14,6 +14,10 @@
     <div class="col-md-4">
         <form asp-action="AddEditProduct">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group" style="visibility:hidden">
+                <input asp-for="Id"  class="form-control" />
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
 
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
@@ -47,13 +51,9 @@
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-outline-primary" asp-controller="Home" asp-action="AddProducts" />
-                <input type="submit" value="Update" class="btn btn-outline-primary" asp-controller="Home" asp-action="UpdateProduct" name="Id" />
+                <input type="submit" value="Update" class="btn btn-outline-primary" asp-controller="Home" asp-action="UpdateProduct" name="id" />
             </div>
-            <div class="form-group" style="visibility:hidden">
-                <label asp-for="Id" class="control-label"></label>
-                <input asp-for="Id" disabled class="form-control" />
-                <span asp-validation-for="Id" class="text-danger"></span>
-            </div>
+            
         </form>
     </div>
 </div>
