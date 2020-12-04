@@ -32,8 +32,8 @@ namespace WirelessMedia
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
              
-        //   services.AddScoped<IProductRepository, ProductRepository>();
-            services.AddScoped<IProductRepository, JsonProductRepository>();
+         //     services.AddScoped<IProductRepository, ProductRepository>();
+           services.AddScoped<IProductRepository, JsonProductRepository>();
 
         }
 

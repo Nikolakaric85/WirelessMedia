@@ -49,14 +49,10 @@ namespace WirelessMedia.Models
 
         public Products Delete(int id)
         {
-            int aaaaa = id;
-
-            string jsonString = File.ReadAllText("products.json");
-            products = JsonSerializer.Deserialize<List<Products>>(jsonString);
-
+           
             products.Remove((products.Where(p => p.Id == id)).FirstOrDefault());
 
-            jsonString = JsonSerializer.Serialize(products);
+            string jsonString = JsonSerializer.Serialize(products);
             File.WriteAllText("products.json", jsonString);
 
             return null ;
